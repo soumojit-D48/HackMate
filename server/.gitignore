@@ -1,0 +1,73 @@
+# Node modules
+node_modules/
+**/node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production
+.env.test
+
+# TypeScript
+*.tsbuildinfo
+dist/
+build/
+
+# Prisma
+prisma/migrations/
+prisma/.env
+prisma/dev.db
+
+# Docker
+docker-compose.override.yml
+**/docker-compose.override.yml
+**/Dockerfile.*
+**/docker-compose.override.yml
+
+# VSCode
+.vscode/
+.vscode/*
+
+# IDEs
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+tmp/
+temp/
+*.swp
+*.swo
+
+# Testing
+coverage/
+**/coverage/
+jest.config.js
+jest.setup.js
+*.test.ts
+*.spec.ts
+
+# Others
+*.bak
+*.backup
+*.log.*
