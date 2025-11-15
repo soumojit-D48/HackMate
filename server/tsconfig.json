@@ -1,95 +1,176 @@
+// {
+//   "compilerOptions": {
+//     /* Language and Environment */
+//     "target": "ES2022",                          // Node.js 18+ supports ES2022
+//     "lib": ["ES2022"],                           // Standard library for Node.js
+//     "module": "NodeNext",                        // ESM with Node.js compatibility
+//     "jsx": "preserve",                           // Not needed for backend, but safe
+    
+//     /* Modules */
+//     "moduleResolution": "NodeNext",              // Modern Node.js ESM resolution
+//     "rootDir": "./src",                          // Source files location
+//     "outDir": "./dist",                          // Compiled output location
+//     "baseUrl": "./",                             // Base for absolute imports
+//     "paths": {
+//       "@/*": ["src/*"],                          // Alias: import from '@/config/db'
+//       "@config/*": ["src/config/*"],
+//       "@services/*": ["src/services/*"],
+//       "@utils/*": ["src/utils/*"],
+//       "@middleware/*": ["src/middleware/*"],
+//       "@types/*": ["src/types/*"]
+//     },
+    
+//     /* Type Checking */
+//     "strict": true,                              // Enable all strict checks
+//     "noImplicitAny": true,                       // Error on 'any' type
+//     "strictNullChecks": true,                    // Strict null checking
+//     "strictFunctionTypes": true,                 // Strict function types
+//     "strictBindCallApply": true,                 // Strict bind/call/apply
+//     "strictPropertyInitialization": true,        // Class properties must be initialized
+//     "noImplicitThis": true,                      // Error on 'this' with any type
+//     "alwaysStrict": true,                        // Use strict mode
+    
+//     /* Additional Checks */
+//     "noUnusedLocals": true,                      // Error on unused local variables
+//     "noUnusedParameters": true,                  // Error on unused parameters
+//     "noImplicitReturns": true,                   // Error if not all paths return
+//     "noFallthroughCasesInSwitch": true,         // Error on fallthrough switch cases
+//     "noUncheckedIndexedAccess": true,           // Add undefined to indexed access
+    
+//     /* Interop Constraints */
+//     "esModuleInterop": true,                     // Better CommonJS/ES6 interop
+//     "allowSyntheticDefaultImports": true,        // Allow default imports from modules
+//     "forceConsistentCasingInFileNames": true,   // Error on case-sensitive imports
+//     "isolatedModules": true,                     // Each file as separate module
+    
+//     /* Emit */
+//     "declaration": true,                         // Generate .d.ts files
+//     "declarationMap": true,                      // Sourcemap for .d.ts files
+//     "sourceMap": true,                           // Generate .map files for debugging
+//     "removeComments": false,                     // Keep comments in output
+    
+//     /* Skip Checks */
+//     "skipLibCheck": true,                        // Skip type checking of .d.ts files
+    
+//     /* Advanced */
+//     "resolveJsonModule": true,                   // Allow importing JSON files
+//     "types": ["node", "jest"],                   // Include Node.js & Jest types
+//     "typeRoots": ["./node_modules/@types"],     // Where to find type definitions
+    
+//     /* Experimental */
+//     "experimentalDecorators": true,              // Enable decorators (for future use)
+//     "emitDecoratorMetadata": true               // Emit design-type metadata
+//   },
+  
+//   /* Files to Include */
+//   "include": [
+//     "src/**/*",                                  // All files in src/
+//     "src/**/*.json"                              // JSON files
+//   ],
+  
+//   /* Files to Exclude */
+//   "exclude": [
+//     "node_modules",                              // Dependencies
+//     "dist",                                      // Compiled output
+//     "**/*.test.ts",                              // Test files (Jest handles these)
+//     "**/*.spec.ts",
+//     "tests"
+//   ],
+  
+//   /* TypeScript Node Options */
+//   "ts-node": {
+//     "esm": true,                                 // Enable ESM in ts-node
+//     "experimentalSpecifierResolution": "node"    // Node-style resolution
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+// {
+//   "compilerOptions": {
+//     "target": "ES2022",
+//     "module": "NodeNext",
+//     "moduleResolution": "NodeNext",
+//     "rootDir": "./src",
+//     "outDir": "./dist",
+//     "strict": true,
+//     "esModuleInterop": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "resolveJsonModule": true,
+//     "declaration": true,
+//     "sourceMap": true,
+//     "baseUrl": "./",
+//     "paths": {
+//       "@/*": ["src/*"]
+//     }
+//   },
+//   "include": ["src/**/*"],
+//   "exclude": ["node_modules", "dist"]
+// }
+
+
+
+
+
 {
   "compilerOptions": {
     /* Language and Environment */
-    "target": "ES2022",                          // Node.js 18+ supports ES2022
-    "lib": ["ES2022"],                           // Standard library for Node.js
-    "module": "NodeNext",                        // ESM with Node.js compatibility
-    "jsx": "preserve",                           // Not needed for backend, but safe
-    
-    /* Modules */
-    "moduleResolution": "NodeNext",              // Modern Node.js ESM resolution
-    "rootDir": "./src",                          // Source files location
-    "outDir": "./dist",                          // Compiled output location
-    "baseUrl": "./",                             // Base for absolute imports
-    "paths": {
-      "@/*": ["src/*"],                          // Alias: import from '@/config/db'
-      "@config/*": ["src/config/*"],
-      "@services/*": ["src/services/*"],
-      "@utils/*": ["src/utils/*"],
-      "@middleware/*": ["src/middleware/*"],
-      "@types/*": ["src/types/*"]
-    },
-    
-    /* Type Checking */
-    "strict": true,                              // Enable all strict checks
-    "noImplicitAny": true,                       // Error on 'any' type
-    "strictNullChecks": true,                    // Strict null checking
-    "strictFunctionTypes": true,                 // Strict function types
-    "strictBindCallApply": true,                 // Strict bind/call/apply
-    "strictPropertyInitialization": true,        // Class properties must be initialized
-    "noImplicitThis": true,                      // Error on 'this' with any type
-    "alwaysStrict": true,                        // Use strict mode
-    
-    /* Additional Checks */
-    "noUnusedLocals": true,                      // Error on unused local variables
-    "noUnusedParameters": true,                  // Error on unused parameters
-    "noImplicitReturns": true,                   // Error if not all paths return
-    "noFallthroughCasesInSwitch": true,         // Error on fallthrough switch cases
-    "noUncheckedIndexedAccess": true,           // Add undefined to indexed access
-    
-    /* Interop Constraints */
-    "esModuleInterop": true,                     // Better CommonJS/ES6 interop
-    "allowSyntheticDefaultImports": true,        // Allow default imports from modules
-    "forceConsistentCasingInFileNames": true,   // Error on case-sensitive imports
-    "isolatedModules": true,                     // Each file as separate module
-    
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "node",
+
     /* Emit */
-    "declaration": true,                         // Generate .d.ts files
-    "declarationMap": true,                      // Sourcemap for .d.ts files
-    "sourceMap": true,                           // Generate .map files for debugging
-    "removeComments": false,                     // Keep comments in output
-    
-    /* Skip Checks */
-    "skipLibCheck": true,                        // Skip type checking of .d.ts files
-    
-    /* Advanced */
-    "resolveJsonModule": true,                   // Allow importing JSON files
-    "types": ["node", "jest"],                   // Include Node.js & Jest types
-    "typeRoots": ["./node_modules/@types"],     // Where to find type definitions
-    
-    /* Experimental */
-    "experimentalDecorators": true,              // Enable decorators (for future use)
-    "emitDecoratorMetadata": true               // Emit design-type metadata
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "removeComments": true,
+
+    /* Interop Constraints */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    /* Type Checking */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+
+    /* Completeness */
+    "skipLibCheck": true
   },
-  
-  /* Files to Include */
   "include": [
-    "src/**/*",                                  // All files in src/
-    "src/**/*.json"                              // JSON files
+    "src/**/*"
   ],
-  
-  /* Files to Exclude */
   "exclude": [
-    "node_modules",                              // Dependencies
-    "dist",                                      // Compiled output
-    "**/*.test.ts",                              // Test files (Jest handles these)
+    "node_modules",
+    "dist",
     "**/*.spec.ts",
-    "tests"
+    "**/*.test.ts"
   ],
-  
-  /* TypeScript Node Options */
   "ts-node": {
-    "esm": true,                                 // Enable ESM in ts-node
-    "experimentalSpecifierResolution": "node"    // Node-style resolution
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
   }
 }
-
-
-
-
-
-
-
-
-
-
